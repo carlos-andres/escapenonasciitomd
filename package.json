@@ -1,5 +1,6 @@
 {
-  "name": "carlos-andres.escapenonasciitomd",
+  "name": "escapenonasciitomd",
+  "publisher": "calo",
   "displayName": "EscapeNonAsciiToMD",
   "description": "Replace non-ASCII characters in a document with markdown or HTML escape sequences.",
   "license": "MIT",
