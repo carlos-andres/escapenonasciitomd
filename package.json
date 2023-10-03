@@ -1,0 +1,57 @@
+{
+  "name": "carlos-andres.escapenonasciitomd",
+  "displayName": "EscapeNonAsciiToMD",
+  "description": "Replace non-ASCII characters in a document with markdown or HTML escape sequences.",
+  "license": "MIT",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.escapenonasciitomd",
+        "title": "Escape Non-ASCII to MD"
+      }
+    ],
+    "configuration": {
+      "title": "EscapeNonAsciiToMD",
+      "properties": {
+        "escape-non-ascii-to-md.characterMapping": {
+          "type": "object",
+          "default": {},
+          "description": "A JSON object that maps special non-ASCII characters to their corresponding escape sequences or replacement characters. The key is the non-ASCII character, and the value is the replacement or escape sequence. For example, `{\"“\":\"&ldquo;\"}` would replace the “ character with `&ldquo;` in the document."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlos-andres/escapenonasciitomd.git"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
