@@ -18,6 +18,10 @@
       {
         "command": "extension.escapenonasciitomd",
         "title": "Escape Non-ASCII to MD"
+      },
+      {
+        "command": "extension.detectinvalidchars",
+        "title": "Detect Non-ASCII Chars in Text File"
       }
     ],
     "configuration": {

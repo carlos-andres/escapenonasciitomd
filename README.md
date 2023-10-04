@@ -5,6 +5,7 @@ The **Escape Non-ASCII to Markdown** extension for Visual Studio Code helps you 
 ## Features
 
 - **Easy-to-Use**: Simply activate the extension and replace non-ASCII characters directly in your active document.
+- **Detect and Highlight Non-ASCII Characters**: Easily identify lines with non-ASCII characters and get a detailed highlighting of each non-ASCII character.
 - **Customizable Mappings**: Customize how characters are mapped using settings.
 
 ## How to Use
@@ -13,6 +14,7 @@ The **Escape Non-ASCII to Markdown** extension for Visual Studio Code helps you 
 2. Open a document with non-ASCII characters.
 3. Run the command **Escape Non-ASCII to MD** from the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
 4. The non-ASCII characters in your active document (or selected text) will be replaced according to the character mapping.
+5. To detect and highlight non-ASCII characters, run the command **Detect Invalid Characters** from the command palette. This will highlight lines containing non-ASCII characters and provide a detailed view of each one.
 
 ## Settings
 
@@ -22,14 +24,14 @@ You can customize the character mapping by adjusting the extension's settings. H
 The setting uses a JSON format to map non-ASCII characters to their desired markdown or HTML escape sequences.
 
 **Example**:
-```json
+\```json
 {
   "‑": "-",
   "–": "-",
   "—": "-",
-  (...) 
+  (...)
 }
-```
+\```
 
 In the above example, the left double quotation mark (“) is replaced with its HTML entity (&ldquo;), and the em dash (—) is replaced with a simple hyphen (-).
 
@@ -38,7 +40,7 @@ In the above example, the left double quotation mark (“) is replaced with its 
 To add more mappings, you can edit the settings in VS Code:
 
 1. Go to the settings (File > Preferences > Settings or Code > Preferences > Settings).
-2. In the search bar, type `escape-non-ascii-to-md.characterMapping` or simple `escape-non-ascii-to-md`
+2. In the search bar, type `escape-non-ascii-to-md.characterMapping` or simply `escape-non-ascii-to-md`
 3. Edit the JSON to add or modify the existing mappings. Ensure the JSON format is valid.
 
 ## Default Character Mapping
