@@ -6,6 +6,7 @@ The **Escape Non-ASCII to Markdown** extension for Visual Studio Code helps you 
 
 - **Easy-to-Use**: Simply activate the extension and replace non-ASCII characters directly in your active document.
 - **Detect and Highlight Non-ASCII Characters**: Easily identify lines with non-ASCII characters and get a detailed highlighting of each non-ASCII character.
+- **Clear Highlighted Non-ASCII Characters**: Once detected, you can clear the highlighting of non-ASCII characters for a cleaner view.
 - **Customizable Mappings**: Customize how characters are mapped using settings.
 
 ## How to Use
@@ -15,6 +16,7 @@ The **Escape Non-ASCII to Markdown** extension for Visual Studio Code helps you 
 3. Run the command **Escape Non-ASCII to MD** from the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
 4. The non-ASCII characters in your active document (or selected text) will be replaced according to the character mapping.
 5. To detect and highlight non-ASCII characters, run the command **Detect Invalid Characters** from the command palette. This will highlight lines containing non-ASCII characters and provide a detailed view of each one.
+6. If you wish to clear the highlighting of non-ASCII characters, run the command **Clear Invalid Char Decorations** from the command palette.
 
 ## Settings
 
@@ -22,16 +24,6 @@ You can customize the character mapping by adjusting the extension's settings. H
 
 ### JSON Format
 The setting uses a JSON format to map non-ASCII characters to their desired markdown or HTML escape sequences.
-
-**Example**:
-\```json
-{
-  "‑": "-",
-  "–": "-",
-  "—": "-",
-  (...)
-}
-\```
 
 In the above example, the left double quotation mark (“) is replaced with its HTML entity (&ldquo;), and the em dash (—) is replaced with a simple hyphen (-).
 

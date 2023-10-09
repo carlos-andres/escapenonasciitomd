@@ -60,7 +60,6 @@ const createMockEditor = (content: string): any => {
     };
 };
 
-
 suite('Extension Test Suite', () => {
     let input: string, expectedOutput: string, mapping: Record<string, string>;
 
